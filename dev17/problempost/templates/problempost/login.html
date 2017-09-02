@@ -1,0 +1,16 @@
+<html>
+<head>
+  <title>GRIVENCES POST</title>
+</head>
+
+<body>
+  <h1>POST</h1>
+  <form action='/signin/' method="post">
+		{% csrf_token %}
+		<input name="Username" id="Username" type="text" placeholder="Username">
+		<input name="Password" id="Password" type="password" placeholder="Password">
+		<input type="submit" name="SignIn">
+	</form>
+	<br><br>
+</body>
+</html>

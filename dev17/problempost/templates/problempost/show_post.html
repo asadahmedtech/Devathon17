@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>GRIVENCES POST</title>
+</head>
+
+<body>
+  <h1>POST</h1>
+  {% for post in posts %}
+  <ul>
+    <li><b>{{post.problemType}}</b></li>
+    <li>{{post.detail}}</li>
+    <li>{{post.councilMem}}</li>
+    <li><i>{{post.status}}</i></li>
+  </ul>
+
+
+  {% endfor %}
+  <button action="/logout/" type="logout" name="logout">
+  <a href="/logout">logout</a>
+  <button action="/new/"  name="addcomplaint">
+  <a href="/new">add complaint</a>
+</form>
+</body>
+</html>

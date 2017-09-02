@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>GRIVENCES POST</title>
+</head>
+
+<body>
+  <h1>POST</h1>
+  {% for griv in grivs %}
+  <ul>
+    <li><b>{{griv.published_date}}</b></li>
+    <li>{{griv.detail}}</li>
+    <li><i>{{griv.status}}</i></li>
+
+    <li><form action="/statuschange/" method="post">
+       {% csrf_token %} 
+  <select name = 'value'  >
+    <option selected="selected" disabled>not fixed</option>
+    <option value="1"+"{{griv.id}}">in progress</option>
+    <option value="2">fixed</option>
+    <input type="submit" name="select">
+  </select></li>
+  </ul>
+  <br><br>
+
+  {% endfor %}
+  <button action="/logout/" type="logout" name="logout">
+  <a href="/logout">logout</a>
+
+</form>
+</body>
+</html>

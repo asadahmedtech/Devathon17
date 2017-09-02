@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>GRIVENCES POST</title>
+</head>
+
+<body>
+  <h1>POST</h1>
+  <form action="/newpost/" method="post">
+    {% csrf_token %}
+    <table>
+      {{form}}
+      <input type="submit" name="SignUp">
+
+  </table>
+  <button action="/logout/" type="logout" name="logout">
+  <a href="/logout">logout</a>
+  <button action="/showtocouncil/" name="showtocouncil">
+  <a href="/showtocouncil">For Council Members</a>
+
+</form>
+</body>
+</html>
